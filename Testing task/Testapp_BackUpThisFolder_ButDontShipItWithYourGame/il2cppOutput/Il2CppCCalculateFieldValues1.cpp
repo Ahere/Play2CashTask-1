@@ -6000,8 +6000,10 @@ struct OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA  : public MonoB
 	String_t* ___Token_5;
 	// System.String OfferWallScript::UserId
 	String_t* ___UserId_6;
-	// UnityEngine.Animator OfferWallScript::Animator
-	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___Animator_7;
+	// UnityEngine.Animator OfferWallScript::offerwallAnimator
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___offerwallAnimator_7;
+	// UnityEngine.GameObject OfferWallScript::popUpWindow
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___popUpWindow_8;
 };
 
 // SurveyContainer
@@ -9396,18 +9398,18 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3484[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3498[3] = 
 {
 	static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_nTag_0)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___m_aValue_1)),static_cast<int32_t>(offsetof(ASN1_t33549D58797C9C33AA83F13AD184EAA00C584A6F, ___elist_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3503[3] = 
-{
-	static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___IsTextualNodeBitmap_0)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___CanReadContentAsBitmap_1)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___HasValueBitmap_2)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3506[2] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3503[2] = 
 {
 	static_cast<int32_t>(offsetof(Example_tFC02019DC7FAADE230F4FE0727EEE859AB7C1BE3, ___Token_4)),static_cast<int32_t>(offsetof(Example_tFC02019DC7FAADE230F4FE0727EEE859AB7C1BE3, ___UserId_5)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3507[1] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3504[1] = 
 {
 	static_cast<int32_t>(offsetof(SurveyList_t2252A32C922105D006C63E1A76915B3ED46AACD1, ___surveys_0)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3509[4] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3506[5] = 
 {
-	static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___Cointext_4)),static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___Token_5)),static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___UserId_6)),static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___Animator_7)),};
+	static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___Cointext_4)),static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___Token_5)),static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___UserId_6)),static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___offerwallAnimator_7)),static_cast<int32_t>(offsetof(OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA, ___popUpWindow_8)),};
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3508[3] = 
+{
+	static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___IsTextualNodeBitmap_0)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___CanReadContentAsBitmap_1)),static_cast<int32_t>(offsetof(XmlReader_t4C709DEF5F01606ECB60B638F1BD6F6E0A9116FD_StaticFields, ___HasValueBitmap_2)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable3513[4] = 
 {
 	static_cast<int32_t>(sizeof(RuntimeObject)),0,0,0,};

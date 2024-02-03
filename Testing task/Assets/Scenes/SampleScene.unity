@@ -276,7 +276,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &89902016
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2216,7 +2216,8 @@ MonoBehaviour:
   Cointext: {fileID: 477125409}
   Token: 4e783ed1-c9ca-46d4-b213-d3439a540f2b
   UserId: jeffsans
-  Animator: {fileID: 89902019}
+  offerwallAnimator: {fileID: 89902019}
+  popUpWindow: {fileID: 89902015}
 --- !u!1 &1421425100
 GameObject:
   m_ObjectHideFlags: 0

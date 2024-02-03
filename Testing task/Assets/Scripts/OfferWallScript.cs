@@ -15,7 +15,9 @@ public class OfferWallScript : MonoBehaviour
     [SerializeField]
     private string UserId = "YOUR_USER_ID";
 
-    public Animator Animator;
+    public Animator offerwallAnimator;
+
+    public GameObject popUpWindow;
 
     // Start is called before the first frame update
     void Start()
@@ -48,7 +50,8 @@ public class OfferWallScript : MonoBehaviour
         }
         else
         {
-            Animator.SetTrigger("pop");
+            popUpWindow.SetActive(true);
+            offerwallAnimator.SetTrigger("pop");
 
         }
     }
@@ -71,7 +74,7 @@ public class OfferWallScript : MonoBehaviour
        /// No backend server available
        /// Cointext.text = payout;
         Cointext.text = "10000";
-        Animator.SetTrigger("unpop");
+        offerwallAnimator.SetTrigger("unpop");
 
     }
 
@@ -98,8 +101,7 @@ public class OfferWallScript : MonoBehaviour
     }
     public void BacktoLevelSelect()
     {
-
-     Animator.SetTrigger("unpop");
+     popUpWindow.SetActive(false);
     }
 
 }

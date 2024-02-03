@@ -1240,8 +1240,10 @@ struct OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA  : public MonoB
 	String_t* ___Token_5;
 	// System.String OfferWallScript::UserId
 	String_t* ___UserId_6;
-	// UnityEngine.Animator OfferWallScript::Animator
-	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___Animator_7;
+	// UnityEngine.Animator OfferWallScript::offerwallAnimator
+	Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* ___offerwallAnimator_7;
+	// UnityEngine.GameObject OfferWallScript::popUpWindow
+	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___popUpWindow_8;
 };
 
 // SurveyContainer
@@ -2337,6 +2339,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SceneManager_LoadScene_m2841705C02C450E4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool String_op_Equality_m030E1B219352228970A076136E455C4E568C02C1 (String_t* ___0_a, String_t* ___1_b, const RuntimeMethod* method) ;
 // System.Void OfferWallScript::loading()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferWallScript_loading_m47C32F5564468E5AE398F716BD3DDD3BF9E2E5BB (OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA* __this, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GameObject::SetActive(System.Boolean)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92 (GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* __this, bool ___0_value, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Animator::SetTrigger(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30 (Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* __this, String_t* ___0_name, const RuntimeMethod* method) ;
 // System.Void UnityEngine.Application::Quit()
@@ -2794,10 +2798,14 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferWallScript_OnPopup_m7EBE9B09A5E0225
 
 IL_001e:
 	{
-		// Animator.SetTrigger("pop");
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_3 = __this->___Animator_7;
+		// popUpWindow.SetActive(true);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_3 = __this->___popUpWindow_8;
 		NullCheck(L_3);
-		Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30(L_3, _stringLiteral7F130329F674A4D413859311C9D7FCA3592D8CB6, NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_3, (bool)1, NULL);
+		// offerwallAnimator.SetTrigger("pop");
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_4 = __this->___offerwallAnimator_7;
+		NullCheck(L_4);
+		Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30(L_4, _stringLiteral7F130329F674A4D413859311C9D7FCA3592D8CB6, NULL);
 		// }
 		return;
 	}
@@ -2834,8 +2842,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferWallScript_RewardCallback_m167F150F
 		TextMeshProUGUI_t101091AF4B578BB534C92E9D1EEAF0611636D957* L_0 = __this->___Cointext_4;
 		NullCheck(L_0);
 		VirtualActionInvoker1< String_t* >::Invoke(66 /* System.Void TMPro.TMP_Text::set_text(System.String) */, L_0, _stringLiteral92B3A3A89C8B221C653E5ECCDE0E05EE5B65C7DC);
-		// Animator.SetTrigger("unpop");
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_1 = __this->___Animator_7;
+		// offerwallAnimator.SetTrigger("unpop");
+		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_1 = __this->___offerwallAnimator_7;
 		NullCheck(L_1);
 		Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30(L_1, _stringLiteral8AD560536D9FB03B68CF28489F90417FE7299F13, NULL);
 		// }
@@ -2891,17 +2899,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferWallScript_Quit_m21E8FB5E4EDD35C05D
 // System.Void OfferWallScript::BacktoLevelSelect()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void OfferWallScript_BacktoLevelSelect_m303E24D8BED0468ADFE436FBBF55ABC3AA0C79AC (OfferWallScript_t02AEB1F6B3845823142A200C183D4597C0E147AA* __this, const RuntimeMethod* method) 
 {
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
 	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8AD560536D9FB03B68CF28489F90417FE7299F13);
-		s_Il2CppMethodInitialized = true;
-	}
-	{
-		// Animator.SetTrigger("unpop");
-		Animator_t8A52E42AE54F76681838FE9E632683EF3952E883* L_0 = __this->___Animator_7;
+		// popUpWindow.SetActive(false);
+		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_0 = __this->___popUpWindow_8;
 		NullCheck(L_0);
-		Animator_SetTrigger_mC9CD54D627C8843EF6E159E167449D216EF6EB30(L_0, _stringLiteral8AD560536D9FB03B68CF28489F90417FE7299F13, NULL);
+		GameObject_SetActive_m638E92E1E75E519E5B24CF150B08CA8E0CDFAB92(L_0, (bool)0, NULL);
 		// }
 		return;
 	}
