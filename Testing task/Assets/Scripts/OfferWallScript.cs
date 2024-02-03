@@ -22,6 +22,8 @@ public class OfferWallScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        popUpWindow.SetActive(false);
+
         BitLabs.Init(Token, UserId);
 
         BitLabs.AddTag("userType", "new");
@@ -30,6 +32,8 @@ public class OfferWallScript : MonoBehaviour
         BitLabs.SetRewardCallback(gameObject.name);
 
         Cointext.text = "0";
+
+        
     }
 
 
@@ -74,7 +78,8 @@ public class OfferWallScript : MonoBehaviour
        /// No backend server available
        /// Cointext.text = payout;
         Cointext.text = "10000";
-        offerwallAnimator.SetTrigger("unpop");
+        popUpWindow.SetActive(false);
+
 
     }
 
